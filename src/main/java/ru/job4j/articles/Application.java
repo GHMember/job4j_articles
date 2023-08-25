@@ -22,13 +22,13 @@ public class Application {
     }
 
     private static Properties loadProperties() {
-        Logger LOGGER = LoggerFactory.getLogger(Application.class.getSimpleName());
-        LOGGER.info("Загрузка настроек приложения");
+        Logger logger = LoggerFactory.getLogger(Application.class.getSimpleName());
+        logger.info("Загрузка настроек приложения");
         var properties = new Properties();
         try (InputStream in = Application.class.getClassLoader().getResourceAsStream("application.properties")) {
             properties.load(in);
         } catch (Exception e) {
-            LOGGER.error("Не удалось загрузить настройки. { }", e.getCause());
+            logger.error("Не удалось загрузить настройки. { }", e.getCause());
             throw new IllegalStateException();
         }
         return properties;
