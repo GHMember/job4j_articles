@@ -16,7 +16,7 @@ import java.util.Properties;
 
 public class ArticleStore implements Store<Article>, AutoCloseable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ArticleStore.class.getSimpleName());
+    private final Logger LOGGER = LoggerFactory.getLogger(ArticleStore.class.getSimpleName());
 
     private final Properties properties;
 

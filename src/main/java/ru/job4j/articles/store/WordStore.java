@@ -16,7 +16,7 @@ import java.util.Properties;
 
 public class WordStore implements Store<Word>, AutoCloseable {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WordStore.class.getSimpleName());
+    private final Logger LOGGER = LoggerFactory.getLogger(WordStore.class.getSimpleName());
 
     private final Properties properties;
 
