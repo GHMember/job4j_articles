@@ -19,7 +19,7 @@ public class Application {
         var articleStore = new ArticleStore(properties);
         var articleGenerator = new RandomArticleGenerator();
         var articleService = new SimpleArticleService(articleGenerator);
-        articleService.generate(wordStore, 250000, articleStore);
+        articleService.generate(wordStore, 1000000, articleStore);
     }
 
     private Properties loadProperties() {
